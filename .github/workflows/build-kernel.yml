@@ -108,7 +108,7 @@ jobs:
     - name: Download Custom-Gcc
       if: env.USE_CUSTOM_GCC_64 == 'true' || env.USE_CUSTOM_GCC_32 == 'true'
       run: |
-        cat /home/runner/work/_temp/9a3ff5d6-c4a6-42ff-bb63-a2f9bd29dd4f.sh
+        cat /home/runner/work/_temp/*.sh
         cd $GITHUB_WORKSPACE/kernel_workspace
         if [ ${{ env.USE_CUSTOM_GCC_64 }} = true ]; then
           if [[ ${{ env.CUSTOM_GCC_64_SOURCE }} =~ git ]]; then
